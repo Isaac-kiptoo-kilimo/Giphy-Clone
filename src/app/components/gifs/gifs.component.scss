@@ -19,10 +19,15 @@ h2{
     display: flex;
     flex-direction: row;
 }
+.images img{
+    margin: 5px;
+}
 .artist{
  
     height: 200px;
     background-color: grey;
+    display: flex;
+    flex-direction: row;
 }
 .clip1{
     background-color: grey;

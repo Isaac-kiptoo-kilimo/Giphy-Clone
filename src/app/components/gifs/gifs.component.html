@@ -1,45 +1,26 @@
+<app-form></app-form>
+
 <div class="container mt-3">
-    <div class="mx-4">
+    <div class="">
       <div class="content">
           <h2 class="text-white pt-4 text-center">PEACE FOR UKRAINE</h2>
       </div>
       <div class="content-lower"></div>
       <h3 class="text-white my-2">Trending</h3>
+      <!-- <div>
+        <button (click)="getGifs()" >Get Gif</button>
+      </div> -->
+      <!-- <div class="text-white">
+          <ul *ngFor="let gif of gifs">
+              <li> {{gif.title}} </li>
+          </ul>
+      </div> -->
       <div class="images">
-          <div class="  trending me-1">
-              
-          </div>
-          <div class=" trending me-1">
-              
-          </div>
-          <div class=" trending me-1">
-             
-          </div>
-          <div class="trending me-1">
-            
-          </div>
-          <div class="trending me-1">
-              
-          </div>
-          <div class=" trending me-1">
-              
-          </div>
-          <div class=" trending me-1">
-             
-          </div>
-      </div>
-      <h3 class="text-white my-2">Artist</h3>
-      <div class="row ">
-          <div class="col-md-4">
-              <div class="artist"></div>
-          </div>
-          <div class="col-md-4 ">
-              <div class="artist"></div>
-          </div>
-          <div class="col-md-4 ">
-              <div class="artist"></div>
-          </div>
-      </div>
+        <div *ngFor="let gif of gifs">
+            <img  src="{{gif.images.original.url}}" width="150px" height="150px" alt="">
+        </div>
+    </div>
+       <app-artist-gifs></app-artist-gifs>
   
       <h3 class="text-white mt-3">Clips</h3>
       <div class="row">

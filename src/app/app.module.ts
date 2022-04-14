@@ -7,6 +7,9 @@ import { GifsComponent } from './components/gifs/gifs.component';
 import { GifDetailsComponent } from './components/gif-details/gif-details.component';
 import { NavbarComponent } from './navbar/navbar/navbar.component';
 import { FormComponent } from './forms/form/form.component';
+import { HttpClientModule } from'@angular/common/http';
+import { ArtistGifsComponent } from './components/artist-gifs/artist-gifs.component';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +17,13 @@ import { FormComponent } from './forms/form/form.component';
     GifsComponent,
     GifDetailsComponent,
     NavbarComponent,
-    FormComponent
+    FormComponent,
+    ArtistGifsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
