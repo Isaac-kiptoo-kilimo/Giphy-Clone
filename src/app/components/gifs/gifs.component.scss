@@ -1,0 +1,42 @@
+.content{
+    background-color: blue;
+    /* height: 50px; */
+}
+h2{
+    margin-bottom: -15px;
+}
+.content-lower{
+    background-color: yellow;
+    height: 40px;
+    margin-top: -10px;
+}
+.trending{
+    background-color: grey;
+    height: 150px;
+    width: 200px;
+}
+.images{
+    display: flex;
+    flex-direction: row;
+}
+.artist{
+ 
+    height: 200px;
+    background-color: grey;
+}
+.clip1{
+    background-color: grey;
+    height: 400px;
+}
+.clip2,.clip3{
+    height: 200px;
+    background-color: grey;
+}
+.stories1{
+    height: 300px;
+    background-color: grey;
+}
+.stories2,.stories3{
+        height: 300px;
+        background-color: grey;
+}
