@@ -1,11 +1,9 @@
-<!-- <app-form (gifSubmitEvent)="searchGif($event)" ></app-form> -->
-<form  (ngSubmit)="searchGifs(submitGifs)" #submitGifs='ngForm' >
+<!-- <app-form (click)="searchGifs" ></app-form> -->
+<!-- <form  (ngSubmit)="searchGifs(gifform)" #gifform="ngForm" >
     <input class="form-control py-3 " ngModel name="searchBar" type="text" placeholder="Search for all gif and stickers" aria-label="Search">
-    <!-- {{searchBar}} -->
-    <!-- <span class="inputSpan">Search</span>
-     -->
+  
      <button type="submit" >search</button>
-  </form>
+  </form> -->
 
 <div class="container mt-3">
     <div class="">
@@ -14,14 +12,8 @@
       </div>
       <div class="content-lower"></div>
       <h3 class="text-white my-2">Trending</h3>
-      <!-- <div>
-        <button (click)="getGifs()" >Get Gif</button>
-      </div> -->
-      <!-- <div class="text-white">
-          <ul *ngFor="let gif of gifs">
-              <li> {{gif.title}} </li>
-          </ul>
-      </div> -->
+     
+     
       <div class="images" *ngIf="!loading">
         <div *ngFor="let gif of gifs">
             <img  src="{{gif.images.original.url}}" width="150px" height="150px" alt="">
@@ -35,68 +27,11 @@
     <h3 class="text-white my-2">Artist</h3>
     <app-artist-gifs></app-artist-gifs>
 
-      <h3 class="text-white mt-3">Clips</h3>
-      <div class="row">
-          <div class="col-md-7 clip1">
-  
-          </div>
-          <div class="col-md-5">
-              <div class="clip2 me-1 mb-1"></div>
-              <div class="clip3 me-1 mt-1"></div>
-          </div>
-      </div>
-      <h3 class="text-white mt-3">Stories</h3>
-      <div class="row">
-          <div class="col-md-6 ">
-              <div class="stories1"></div>
-          </div>
-          <div class="col-md-3">
-              <div class=" stories2"></div>
-          </div>
-          <div class="col-md-3">
-              <div class="stories3"></div>
-          </div>
-      </div>
-      <div class="row mt-3">
-          <div class="col-md-3">
-              <div class=" stories2"></div>
-          </div>
-          <div class="col-md-3">
-              <div class="stories3"></div>
-          </div>
-          <div class="col-md-6 ">
-              <div class="stories1"></div>
-          </div>
-      </div>
-      <div class="row mt-3">
-          <div class="col-md-3">
-              <div class=" stories2"></div>
-          </div>
-          <div class="col-md-3 ">
-              <div class="stories1"></div>
-          </div>
-          <div class="col-md-3">
-              <div class="stories3"></div>
-          </div>
-          <div class="col-md-3">
-              <div class="stories3"></div>
-          </div>
-          
-      </div>
-      <div class="row mt-3">
-          <div class="col-md-3">
-              <div class=" stories2"></div>
-          </div>
-          <div class="col-md-6 ">
-              <div class="stories1"></div>
-          </div>
-          <div class="col-md-3">
-              <div class="stories3"></div>
-          </div>
-          
+ <div>
+        <button (click)="getMoreGifs(100)" >{{buttonName}}</button>
       </div>
     </div>
   </div>
   
  
-  
+  <router-outlet></router-outlet>

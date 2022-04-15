@@ -5,14 +5,14 @@ import { GifsComponent } from './components/gifs/gifs.component';
 import { SearchGifsComponent } from './components/search-gifs/search-gifs.component';
 
 const routes: Routes = [
-  {
-    path:'home',
-    component:GifsComponent
-  },
-  {
-    path:'search',
-    component:SearchGifsComponent
-  }
+  // {
+  //   // path:'home',
+  //   // component:GifsComponent
+  // },
+  // {
+  //   // path:'search',
+  //   // component:SearchGifsComponent
+  // }
 ];
 
 @NgModule({

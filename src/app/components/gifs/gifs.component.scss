@@ -17,7 +17,9 @@ h2{
 }
 .images{
     display: flex;
-    flex-direction: row;
+    flex-direction: wrap;
+    // overflow: hidden;
+    flex-wrap: wrap;
 }
 .images img{
     margin: 5px;
