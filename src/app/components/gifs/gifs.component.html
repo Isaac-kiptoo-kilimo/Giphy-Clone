@@ -1,4 +1,11 @@
-<app-form></app-form>
+<!-- <app-form (gifSubmitEvent)="searchGif($event)" ></app-form> -->
+<form  (ngSubmit)="searchGifs(submitGifs)" #submitGifs='ngForm' >
+    <input class="form-control py-3 " ngModel name="searchBar" type="text" placeholder="Search for all gif and stickers" aria-label="Search">
+    <!-- {{searchBar}} -->
+    <!-- <span class="inputSpan">Search</span>
+     -->
+     <button type="submit" >search</button>
+  </form>
 
 <div class="container mt-3">
     <div class="">

@@ -11,6 +11,9 @@ import { HttpClientModule } from'@angular/common/http';
 import { ArtistGifsComponent } from './components/artist-gifs/artist-gifs.component';
 import { ClipsComponent } from './components/clips/clips.component';
 
+import { SearchGifsComponent } from './components/search-gifs/search-gifs.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -20,11 +23,13 @@ import { ClipsComponent } from './components/clips/clips.component';
     NavbarComponent,
     FormComponent,
     ArtistGifsComponent,
-    ClipsComponent
+    ClipsComponent,
+    SearchGifsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],
