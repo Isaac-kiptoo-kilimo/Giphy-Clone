@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar/navbar.component';
 import { FormComponent } from './forms/form/form.component';
 import { HttpClientModule } from'@angular/common/http';
 import { ArtistGifsComponent } from './components/artist-gifs/artist-gifs.component';
+import { ClipsComponent } from './components/clips/clips.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ArtistGifsComponent } from './components/artist-gifs/artist-gifs.compon
     GifDetailsComponent,
     NavbarComponent,
     FormComponent,
-    ArtistGifsComponent
+    ArtistGifsComponent,
+    ClipsComponent
   ],
   imports: [
     BrowserModule,

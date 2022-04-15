@@ -8,8 +8,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GifsComponent implements OnInit {
   gifs: any[]=[];
+  loading:boolean=true;
 
   constructor(private http:HttpClient) { }
+
+  ngOnInit(): void {
+    this.getGifs()
+    // this.gifs = this.getGifs(3)
+  }
 
   getGifs():any{
     this.http
@@ -19,17 +25,16 @@ export class GifsComponent implements OnInit {
       // data.data;
       // console.log(data.data);
       this.gifs = data.data;
+      this.loading=false;
     },
     // (err) => {
     //   console.log('error');
     // }
   )
   }
+
   
 
-  ngOnInit(): void {
-    this.getGifs()
-    // this.gifs = this.getGifs(3)
-  }
+  
 ;
 }

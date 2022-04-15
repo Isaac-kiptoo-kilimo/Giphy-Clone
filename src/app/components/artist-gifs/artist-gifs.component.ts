@@ -9,6 +9,10 @@ import { HttpClient } from '@angular/common/http';
 export class ArtistGifsComponent implements OnInit {
   gifs: any[]=[];
   constructor(private http:HttpClient) { }
+  ngOnInit(): void {
+    this.getGifs()
+  }
+
   getGifs():any{
     this.http
     .get<any>(`https://api.giphy.com/v1/gifs/trending?api_key=eeUIYSYCbPMNZNGmAgUKj0YdqzjsGEAT&limit=3&rating=g`)
@@ -24,8 +28,5 @@ export class ArtistGifsComponent implements OnInit {
   )
   }
 
-  ngOnInit(): void {
-    this.getGifs()
-  }
 
 }
