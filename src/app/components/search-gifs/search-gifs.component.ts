@@ -8,15 +8,14 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class SearchGifsComponent implements OnInit {
   gifs = new BehaviorSubject<any>([])
-  searchName!:string
   constructor(private http:HttpClient) { }
-  
-  search(searchName:string){
-    if(searchName !== ''){
+  // searchName:string
+  search(gifs:any){
+    // if(searchName != ''){
     return this.http.get(`https://api.giphy.com/v1/gifs/search?api_key=eeUIYSYCbPMNZNGmAgUKj0YdqzjsGEAT&q=&limit=25&offset=0&rating=g&lang=en`).subscribe((response:any)=>{
       this.gifs.next(response.data)
     })
-  }
+  // }
 }
 
   ngOnInit(): void {
